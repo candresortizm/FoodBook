@@ -1,0 +1,18 @@
+<div class="container">
+  <%= form_for @dish  do |f| %>
+    <div class="form-group">
+      <label for="dish_name">Name</label>
+      <input type="text" name="dish[name]" id="dish_name" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="dish_price">Price</label>
+      <input type="text" name="dish[price]" value="<%= @dish.price %>" id="dish_price" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="dish_origin">Origin</label>
+      <input type="text" name="dish[origin]" value="<%= @dish.origin %>" id="dish_origin" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  <% end %>
+
+</div>

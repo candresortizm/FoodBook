@@ -1,0 +1,22 @@
+<div class="container">
+  <%= form_for @meal  do |f| %>
+    <div class="form-group">
+      <label for="dish_name">Name</label>
+      <input type="text" name="meal[name]" id="meal_name" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="meal_price">Price</label>
+      <input type="text" name="meal[price]" value="<%= @meal.price %>" id="meal_price" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="meal_restaurant">Restaurant</label>
+      <input type="text" name="meal[restaurant]" value="<%= @meal.restaurant %>" id="meal_restaurant" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="meal_city">City</label>
+      <input type="text" name="meal[city]" value="<%= @meal.city %>" id="meal_city" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  <% end %>
+
+</div>

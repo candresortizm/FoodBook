@@ -1,0 +1,28 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+  port: 3306
+  username: bootcamp2
+  password: bootcamp2
+  host: 127.0.0.1
+
+
+development:
+  <<: *default
+  database: foodbook_development
+
+test:
+  <<: *default
+  database: foodbook_test
+
+production:
+  <<: *default
+  database: foodbook_production
